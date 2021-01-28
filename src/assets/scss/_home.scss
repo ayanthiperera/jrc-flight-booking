@@ -1,0 +1,11 @@
+.home-content {
+    position: relative;
+    .home-bg {
+        height: 745px;
+        background-color: gray;
+        position: relative;
+        > div {
+            height: 100%;
+        }
+    }
+}

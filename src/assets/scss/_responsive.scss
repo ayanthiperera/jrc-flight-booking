@@ -1,0 +1,19 @@
+@mixin media-breakpoint-for($device) {
+    @if $device == mobile {
+        @media (max-width: 900px) {
+            @content;
+        }
+    } @else if $device == tab {
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+            @content;
+        }
+    } @else if $device == tab-landscape {
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $device == ipad-pro-portrait {
+        @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            @content;
+        }
+    }
+}
